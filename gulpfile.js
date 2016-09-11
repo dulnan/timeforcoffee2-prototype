@@ -8,6 +8,7 @@ var uglify      = require('gulp-uglify');
 var minifycss   = require('gulp-clean-css');
 var minifhtml   = require('gulp-htmlmin');
 var twig        = require('gulp-twig');
+var data        = require('gulp-data');
 var uncss       = require('gulp-uncss');
 var concat      = require('gulp-concat');
 var prefix      = require('gulp-autoprefixer');
@@ -26,6 +27,11 @@ function swallowError (error) {
 
 gulp.task('twig', function () {
     return gulp.src('src/templates/*.twig')
+        .pipe(data( function(file) {
+          return JSON.parse(
+            fs.readFileSync('src/departures.json')
+          );
+        }))
         .pipe(twig())
         .pipe(config.production ? minifhtml({collapseWhitespace: true}) : util.noop())
         .pipe(gulp.dest('dist'));

@@ -1,3 +1,4 @@
+
 <html lang="de">
 
 <head>
@@ -10,11 +11,9 @@
 </head>
 
 <body>
+<div class="tfc-view tfc-view--home">
     <header class="tfc-navbar">
         <section class="tfc-view-section tfc-view-section--navbar">
-            <header class="tfc-view-section-header">
-                <h1 class="tfc-h1 tfc-view-section-header-h1">Suchen</h1>
-            </header>
             <article class="tfc-view-section-content tfc-navbar-search-container">
                 <input type="text" name="search" placeholder="Haltestelle suchen" class="tfc-input tfc-input-text tfc-navbar-search-input">
                 <button class="tfc-button tfc-button-flat tfc-navbar-search-button">Abbrechen</button>
@@ -22,80 +21,117 @@
             <div class="tfc-navbar-search-overlay-button"></div>
         </section>
     </header>
-    <main id="tfc-viewcontainer--home" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
 
-        <section class="tfc-view-section">
-            <header class="tfc-view-section-header">
-                <h1 class="tfc-h1 tfc-view-section-header-h1">Favoriten</h1>
-                <button class="tfc-button tfc-button-flat tfc-view-section-header-button" name="tfc-button-edit_favorites">Bearbeiten</button>
-            </header>
-            <article class="tfc-view-section-content">
-                <ul class="tfc-list tfc-list--favorites">
-                    <li class="tfc-list-item tfc-list-item--favorites"><span>Büro Liip Quellenstrasse</span></li>
-                    <li class="tfc-list-item tfc-list-item--favorites"><span>Bus 161 Bürkliplatz</span></li>
-                    <li class="tfc-list-item tfc-list-item--favorites"><span>Zürich HB</span></li>
-                    <li class="tfc-list-item tfc-list-item--favorites"><span>S8 Wollishofen</span></li>
-                </ul>
-            </article>
-        </section>
+    <section class="tfc-scrollview tfc-scrollview--home">
+        <main id="tfc-viewcontainer--home" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
+            <section class="tfc-view-section">
+                <header class="tfc-view-section-header">
+                    <h1 class="tfc-h1 tfc-view-section-header-h1">Favoriten</h1>
+                    <button class="tfc-button tfc-button-flat tfc-view-section-header-button" name="tfc-button-edit_favorites">Bearbeiten</button>
+                </header>
+                <article class="tfc-view-section-content">
+                    <ul class="tfc-list tfc-list--favorites">
+                        <li class="tfc-list-item tfc-list-item--favorites"><span>Büro Liip Quellenstrasse</span></li>
+                        <li class="tfc-list-item tfc-list-item--favorites"><span>Bus 161 Bürkliplatz</span></li>
+                        <li class="tfc-list-item tfc-list-item--favorites"><span>Zürich HB</span></li>
+                        <li class="tfc-list-item tfc-list-item--favorites"><span>S8 Wollishofen</span></li>
+                    </ul>
+                </article>
+            </section>
 
-        <section class="tfc-view-section">
-            <header class="tfc-view-section-header">
-                <h1 class="tfc-h1">In der Nähe</h1>
-            </header>
-            <article class="tfc-view-section-content">
-                <ul class="tfc-list tfc-list-classic">
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
-                </ul>
-            </article>
-        </section>
-    </main>
+            <section class="tfc-view-section">
+                <header class="tfc-view-section-header">
+                    <h1 class="tfc-h1">In der Nähe</h1>
+                </header>
+                <article class="tfc-view-section-content">
+                    <ul class="tfc-list tfc-list-classic">
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+    </section>
 
-    <aside id="tfc-viewcontainer--searchresults" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
-        <section class="tfc-view-section">
-            <article class="tfc-view-section-content">
-                <ul class="tfc-list tfc-list-classic">
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
-                    <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
-                </ul>
-            </article>
-        </section>
-    </aside>
+    <section class="tfc-scrollview tfc-scrollview--searchresults">
+        <aside id="tfc-viewcontainer--searchresults" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
+            <section class="tfc-view-section">
+                <article class="tfc-view-section-content">
+                    <ul class="tfc-list tfc-list-classic">
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Limmatplatz</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Okenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Röntgenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Lettenstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Nordstrasse</li>
+                        <li class="tfc-list-item tfc-list-item--classic">Zürich, Museum für Gestaltung</li>
+                    </ul>
+                </article>
+            </section>
+        </aside>
+    </section>
+</div>
 
-    <script src="js/main.js?{{ random(839270524) }}"></script>
+<div class="tfc-view tfc-view--detail">
+    <section class="tfc-scrollview tfc-scrollview--detail">
+        <main id="tfc-viewcontainer--detail" class="tfc-viewcontainer">
+            <section class="tfc-view-section">
+                <header class="tfc-view-section-header">
+                    <h1 class="tfc-h1">Zürich, Limmatplatz</h1>
+                </header>
+                <article class="tfc-view-section-content">
+                    <ul class="tfc-list tfc-list-classic">
+                        {% for departure in departures %}
+                            <li class="tfc-list-item tfc-list-item--departure">
+                                <div class="tfc-list-item--departure-name" style="background: {{ departure.colors.bg}}; color: {{ departure.colors.fg }}">
+                                    {{ departure.name }}
+                                </div>
+                                <div class="tfc-list-item--departure-to">
+                                    {{ departure.to }}
+                                </div>
+                                <div class="tfc-list-item--departure-time">
+                                    {{ departure.departure.scheduled }}
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                    0'
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </article>
+            </section>
+        </main>
+    </section>
+</div>
+
+<script src="js/main.js?{{ random(839270524) }}"></script>
 </body>
 
 </html>

@@ -8,6 +8,7 @@
     "gulp-notify": "*",
     "gulp-rename": "*",
     "gulp-sass": "*",
+    "gulp-data": "*",
     "gulp-size": "*",
     "gulp-twig": "*",
     "gulp-uglify": "*",

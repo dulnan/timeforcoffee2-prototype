@@ -8,6 +8,7 @@ $(function() {
     FastClick.attach(document.body);
 });
 
+
 function init() {
 
     // Add Class to body indicating we can use 0.5px
@@ -28,7 +29,7 @@ function init() {
     }
 
     // set padding
-    $(".tfc-viewcontainer--with-navbar").css("padding-top", ($(".tfc-navbar").height() + 10) + "px");
+    // $(".tfc-viewcontainer--with-navbar").css("padding-top", ($(".tfc-navbar").height() + 10) + "px");
 
 
     // Navbar Searching
@@ -50,7 +51,8 @@ function init() {
     })
 
     // Hacky Shit
-    $(".tfc-viewcontainer").bind('touchstart', function(e) {
+    $(".tfc-scrollview").bind('touchstart', function(e) {
+        $(this).data("scrollhack", false);
         $(this).data("moved", false);
 
         if (this.scrollTop == 0) {
@@ -62,26 +64,16 @@ function init() {
             $(this).css("transform", "translateY(-1px)");
             $(this).data("scrollhack", "minus");
         } else {
-            $(".tfc-viewcontainer").css("transform", "translateY(0px)");
+            $(".tfc-scrollview").css("transform", "translateY(0px)");
         }
     });
 
-    $(".tfc-viewcontainer").bind('touchmove', function(e) {
+    $(".tfc-scrollview").bind('touchmove', function() {
         $(this).data("moved", true);
     });
 
-    $("#tfc-viewcontainer--home").bind('scroll', function(e) {
-        var scrollTop = Math.min($(this).scrollTop(), 34);
-        $(".tfc-navbar").css("transform", "translateY(-" + scrollTop + "px)");
-    });
-
-    $("#tfc-viewcontainer--home").bind('touchstart touchmove touchend', function(e) {
-        var scrollTop = Math.min($(this).scrollTop(), 34);
-        $(".tfc-navbar").css("transform", "translateY(-" + scrollTop + "px)");
-    });
-
-    $(".tfc-viewcontainer").bind('touchend', function() {
-        $(".tfc-viewcontainer").css("transform", "translateY(0px)");
+    $(".tfc-scrollview").bind('touchend', function() {
+        $(".tfc-scrollview").css("transform", "translateY(0px)");
 
         if ($(this).data("moved") == false) {
             if ($(this).data("scrollhack") == "plus") {
@@ -93,7 +85,24 @@ function init() {
         }
         $(this).data("scrollhack", false);
         $(this).data("moved", false);
+
     });
+
+    $(".tfc-scrollview--searchresults").bind('scroll', function() {
+        $(".tfc-navbar-search-input").blur();
+    });
+
+
+    // Transitioning to Detail View
+    $(".tfc-list-item--classic").click(function(e) {
+        e.stopPropagation();
+        $("body").addClass("tfc--prepare-viewstate-detail");
+        setTimeout(function() {
+            $("body").addClass("tfc--viewstate-detail");
+        }, 50);
+    })
+
+
 
     $(".tfc-navbar").bind('touchmove', function(e) {
         e.preventDefault();
