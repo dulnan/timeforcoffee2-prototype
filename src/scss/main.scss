@@ -1,0 +1,263 @@
+@import 'partials/normalize';
+@import 'partials/variables';
+
+html {
+    background: white;
+    overflow: hidden;
+    height: 100vh;
+}
+body {
+    color: $black;
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+// Basics
+
+// Typography
+.tfc-h1 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+// Forms
+.tfc-input {
+    -webkit-appearance: none;
+    // -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.tfc-input-text {
+    border: 0;
+    border-radius: 8px;
+    background: $grey-20;
+    color: $black;
+    padding: 8px;
+    line-height: normal;
+    &::placeholder {
+        color: $grey-50;
+        opacity: 1;
+        font-size: 16px;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.tfc-button {
+    -webkit-appearance: none;
+    border: 0;
+    padding: 0;
+    background: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+.tfc-button-flat {
+    color: $blue;
+    &:hover {
+        opacity: 0.3;
+    }
+}
+
+
+
+
+// Viewcontainer
+
+.tfc-viewcontainer {
+    background: white;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 1px 0;
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+    }
+}
+
+.tfc-viewcontainer--with-navbar {
+    padding-top: 70px;
+}
+
+.tfc-view-section {
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+#tfc-viewcontainer--home {
+    will-change: transform, filter;
+    perspective: 0;
+}
+
+#tfc-viewcontainer--searchresults {
+    opacity: 0;
+    display: none;
+    will-change: opacity;
+    perspective: 0;
+}
+
+// Viewcontainer States
+.tfc--prepare-viewstate-search {
+    .tfc-navbar-search-overlay-button {
+        display: none;
+    }
+    #tfc-viewcontainer--home {
+        transition: 0.5s linear;
+    }
+    #tfc-viewcontainer--searchresults {
+        display: block;
+        transition: 0.5s linear;
+    }
+}
+
+.tfc--viewstate-search {
+    #tfc-viewcontainer--home {
+        transform: translateY(60px) !important;
+        filter: blur(20px);
+        opacity: 0;
+    }
+    #tfc-viewcontainer--searchresults {
+        opacity: 1;
+    }
+}
+
+
+
+// Navigation Bar
+.tfc-navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.97);
+    .tfc--backdropFilter & {
+        -webkit-backdrop-filter: blur(30px);
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    z-index: 1000;
+}
+
+.tfc-view-section--navbar {
+    border-bottom: 1px solid $grey-20;
+    .tfc--retina & {
+        border-width: 0.5px;
+    }
+}
+
+.tfc-navbar-search-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+.tfc-navbar-search-input {
+    width: 100%;
+    box-sizing: border-box;
+    background: $grey-20-translucent;
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.4s flex;
+    height: 40px;
+    position: relative;
+    &::placeholder {
+        transition: 0.4s;
+    }
+}
+
+.tfc-navbar-search-button {
+    flex: 0 0;
+    overflow: hidden;
+    text-align: left;
+    transition: 0.4s flex;
+    height: 40px;
+    .tfc--viewstate-search & {
+        flex: 0 0 87px;
+    }
+}
+
+.tfc-navbar-search-overlay-button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+
+
+
+
+
+.tfc-view-section-header {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+}
+
+.tfc-view-section-header-h1 {
+    flex: 1 1 0;
+}
+
+.tfc-view-section-header-button {
+    flex: 0 0 auto;
+    text-align: right;
+}
+
+
+// Lists
+.tfc-list-item {
+    list-style-type: none;
+    box-sizing: border-box;
+    display: block;
+    .tfc--retina & {
+        border-width: 0.5px;
+    }
+}
+
+.tfc-list-item--classic {
+    font-size: 20px;
+    padding: 20px 0 20px 0px;
+    margin-left: 10px;
+    border-bottom: 1px solid $grey-20;
+    .tfc--retina & {
+        border-width: 0.5px;
+    }
+}
+
+.tfc-list--favorites {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tfc-list-item--favorites {
+    flex: 1 1 100%;
+    padding: 5px;
+    span {
+        display: block;
+        border-radius: 8px;
+        font-weight: bold;
+        color: white;
+        background: $blue;
+        padding: 14px 10px;
+    }
+}
