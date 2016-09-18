@@ -1,1508 +1,629 @@
 {
+  
+  "stationDepartures": [
+    {
+      "station": "Zürich, Limmatplatz",
+      "departures": [
+        {
+          "colors": {
+            "bg": "#11296f",
+            "fg": "#ffffff"
+          },
+          "name": "4",
+          "type": "tram"
+        },
+        {
+          "colors": {
+            "bg": "#ca7d3c",
+            "fg": "#ffffff"
+          },
+          "name": "6",
+          "type": "tram"
+        },
+        {
+          "colors": {
+            "bg": "#ffc100",
+            "fg": "#000000"
+          },
+          "name": "13",
+          "type": "tram"
+        },
+        {
+          "colors": {
+            "bg": "#8e224d",
+            "fg": "#ffffff"
+          },
+          "name": "17",
+          "type": "tram"
+        },
+        {
+          "colors": {
+            "bg": "#ccb2d1",
+            "fg": "#000000"
+          },
+          "name": "32",
+          "type": "bus"
+        },
+        {
+          "colors": {
+            "bg": "#000000",
+            "fg": "#fff200"
+          },
+          "name": "N1",
+          "type": "bus"
+        },
+        {
+          "colors": {
+            "bg": "#000000",
+            "fg": "#fff200"
+          },
+          "name": "N4",
+          "type": "bus"
+        },
+        {
+          "colors": {
+            "bg": "#000000",
+            "fg": "#fff200"
+          },
+          "name": "N5",
+          "type": "bus"
+        },
+        {
+          "colors": {
+            "bg": "#000000",
+            "fg": "#fff200"
+          },
+          "name": "N7",
+          "type": "bus"
+        },
+        {
+          "colors": {
+            "bg": "#000000",
+            "fg": "#fff200"
+          },
+          "name": "N8",
+          "type": "bus"
+        },
+        {
+          "colors": {
+            "bg": "#000000",
+            "fg": "#fff200"
+          },
+          "name": "N13",
+          "type": "bus"
+        }
+      ]
+    }
+  ],
+  "departures": [
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#e20a16",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "16:35",
+        "scheduled": "12:48"
+      },
+      "name": "2",
+      "platform": null,
+      "to": "Zürich, Bahnhof Tiefenbrunnen",
+      "type": "tram"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#00892f",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "16:39",
+        "scheduled": "12:49"
+      },
+      "name": "3",
+      "platform": null,
+      "to": "Zürich, Albisrieden",
+      "type": "tram"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#11296f",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "12:49",
+        "scheduled": "12:49"
+      },
+      "name": "4",
+      "platform": null,
+      "to": "Zürich, Bahnhof Altstetten N",
+      "type": "tram"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#734522",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "16:34",
+        "scheduled": "12:51"
+      },
+      "name": "5",
+      "platform": null,
+      "to": "Zürich, Zoo",
+      "type": "tram"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#ca7d3c",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "16:46",
+        "scheduled": "12:53"
+      },
+      "name": "6",
+      "platform": null,
+      "to": "Zürich, Bahnhofplatz/HB",
+      "type": "tram"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#000000",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "16:31",
+        "scheduled": "12:57"
+      },
+      "name": "7",
+      "platform": null,
+      "to": "Zürich, Bahnhof Stettbach",
+      "type": "tram"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#8ab51f",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": "16:32",
+        "scheduled": "12:59"
+      },
+      "name": "8",
+      "platform": null,
+      "to": "Zürich, Klusplatz",
+      "type": "tram"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#11296f",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "16:30",
+        "scheduled": "13:00"
+      },
+      "name": "9",
+      "platform": null,
+      "to": "Zürich, Hirzenbach",
+      "type": "tram"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#e12472",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "16:53",
+        "scheduled": "13:03"
+      },
+      "name": "10",
+      "platform": null,
+      "to": "Zürich Flughafen, Fracht",
+      "type": "tram"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#00892f",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "16:29",
+        "scheduled": "13:06"
+      },
+      "name": "11",
+      "platform": null,
+      "to": "Zürich, Auzelg",
+      "type": "tram"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#92d6e3",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": "16:48",
+        "scheduled": "13:11"
+      },
+      "name": "12",
+      "platform": null,
+      "to": "Zürich Flughafen, Fracht",
+      "type": "tram"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#ffc100",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": "12:49",
+        "scheduled": "13:16"
+      },
+      "name": "13",
+      "platform": null,
+      "to": "Zürich, Albisgütli",
+      "type": "tram"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#008dc5",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "16:44",
+        "scheduled": "13:26"
+      },
+      "name": "14",
+      "platform": null,
+      "to": "Zürich, Triemli",
+      "type": "tram"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#8e224d",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "12:48",
+        "scheduled": "13:38"
+      },
+      "name": "17",
+      "platform": null,
+      "to": "Zürich, Werdhölzli",
+      "type": "tram"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#a5a2c6",
+        "fg": "#ffffff"
+      },
+      "departure": {
+        "realtime": "16:45",
+        "scheduled": "13:41"
+      },
+      "name": "31",
+      "platform": null,
+      "to": "Zürich, Hegibachplatz",
+      "type": "bus"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#ccb2d1",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": "16:47",
+        "scheduled": "13:46"
+      },
+      "name": "32",
+      "platform": null,
+      "to": "Zürich, Holzerhurd",
+      "type": "bus"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#dad69c",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": "16:44",
+        "scheduled": "13:51"
+      },
+      "name": "33",
+      "platform": null,
+      "to": "Zürich, Triemli",
+      "type": "bus"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#ffffff",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": null,
+        "scheduled": "13:59"
+      },
+      "name": "39",
+      "platform": null,
+      "to": "Zürich, Letzistrasse",
+      "type": "bus"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#000000",
+        "fg": "#fff200"
+      },
+      "departure": {
+        "realtime": null,
+        "scheduled": "14:00"
+      },
+      "name": "N8",
+      "platform": null,
+      "to": "Zürich, Albisriederplatz",
+      "type": "bus"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#cac0b6",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": "17:08",
+        "scheduled": "14:02"
+      },
+      "name": "62",
+      "platform": null,
+      "to": "Zürich, Schwamendingerplatz",
+      "type": "bus"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#c6a693",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": "16:45",
+        "scheduled": "14:07"
+      },
+      "name": "72",
+      "platform": null,
+      "to": "Zürich, Milchbuck",
+      "type": "bus"
+    },
+    {
+      "accessible": true,
+      "colors": {
+        "bg": "#ffffff",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": "16:37",
+        "scheduled": "14:11"
+      },
+      "name": "912",
+      "platform": null,
+      "to": "Zürich, Bellevue",
+      "type": "bus"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#FFFFFF",
+        "fg": "#E00000"
+      },
+      "departure": {
+        "realtime": "17:05",
+        "scheduled": "14:13"
+      },
+      "name": "RE",
+      "platform": "11",
+      "to": "Schaffhausen",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#E00000",
+        "fg": "#FFFFFF"
+      },
+      "departure": {
+        "realtime": "17:07",
+        "scheduled": "14:18"
+      },
+      "name": "IC",
+      "platform": "33",
+      "to": "Romanshorn",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#E00000",
+        "fg": "#FFFFFF"
+      },
+      "departure": {
+        "realtime": "17:04",
+        "scheduled": "14:19"
+      },
+      "name": "ICN",
+      "platform": "13",
+      "to": "Genève-Aéroport",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#E00000",
+        "fg": "#FFFFFF"
+      },
+      "departure": {
+        "realtime": null,
+        "scheduled": "14:24"
+      },
+      "name": "ICE",
+      "platform": "15",
+      "to": "Basel Bad Bf",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#E00000",
+        "fg": "#FFFFFF"
+      },
+      "departure": {
+        "realtime": "17:05",
+        "scheduled": "14:29"
+      },
+      "name": "IR",
+      "platform": "4",
+      "to": "Luzern",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#E00000",
+        "fg": "#FFFFFF"
+      },
+      "departure": {
+        "realtime": "17:05",
+        "scheduled": "14:31"
+      },
+      "name": "VAE",
+      "platform": "4",
+      "to": "Luzern",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#FFFFFF",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": null,
+        "scheduled": "14:38"
+      },
+      "name": "Schiff",
+      "platform": null,
+      "to": "Konstanz Hafen",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#E00000",
+        "fg": "#FFFFFF"
+      },
+      "departure": {
+        "realtime": "17:05",
+        "scheduled": "14:42"
+      },
+      "name": "CNL",
+      "platform": "4",
+      "to": "Hamburg",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#E00000",
+        "fg": "#FFFFFF"
+      },
+      "departure": {
+        "realtime": "17:05",
+        "scheduled": "14:49"
+      },
+      "name": "EC",
+      "platform": "4",
+      "to": "München",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#E00000",
+        "fg": "#FFFFFF"
+      },
+      "departure": {
+        "realtime": "17:05",
+        "scheduled": "14:51"
+      },
+      "name": "EN",
+      "platform": "4",
+      "to": "Prag",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#E00000",
+        "fg": "#FFFFFF"
+      },
+      "departure": {
+        "realtime": "17:05",
+        "scheduled": "14:57"
+      },
+      "name": "TGV",
+      "platform": "4",
+      "to": "Paris",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#ffffff",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": "17:05",
+        "scheduled": "14:59"
+      },
+      "name": "Fun",
+      "platform": "4",
+      "to": "Marzili",
+      "type": "train"
+    },
+    {
+      "accessible": false,
+      "colors": {
+        "bg": "#ffffff",
+        "fg": "#000000"
+      },
+      "departure": {
+        "realtime": "17:05",
+        "scheduled": "15:05"
+      },
+      "name": "SL",
+      "platform": "4",
+      "to": "Flims Dorf BFL",
+      "type": "train"
+    }
+  ],
   "meta": {
     "station_id": "008591257",
     "station_name": null
-  },
-  "departures": [
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:48",
-        "realtime": "12:48"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Altstetten N",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:49",
-        "realtime": "12:49"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Albisgütli",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:49",
-        "realtime": "12:49"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:49",
-        "realtime": "12:49"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:51",
-        "realtime": "12:52"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Tiefenbrunnen",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:52",
-        "realtime": "12:52"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Frankental",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:52",
-        "realtime": "12:52"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:53",
-        "realtime": "12:53"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:55",
-        "realtime": "12:55"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:56",
-        "realtime": "12:56"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Albisgütli",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:56",
-        "realtime": "12:56"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:57",
-        "realtime": "12:57"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Altstetten N",
-      "platform": null,
-      "departure": {
-        "scheduled": "12:59",
-        "realtime": "12:59"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:00",
-        "realtime": "13:00"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:01",
-        "realtime": "13:01"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Tiefenbrunnen",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:02",
-        "realtime": "13:02"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:03",
-        "realtime": "13:03"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:03",
-        "realtime": "13:03"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Frankental",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:07",
-        "realtime": "13:07"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:07",
-        "realtime": "13:07"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:08",
-        "realtime": "13:08"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Altstetten N",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:09",
-        "realtime": "13:09"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:09",
-        "realtime": "13:09"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:11",
-        "realtime": "13:11"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Albisgütli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:11",
-        "realtime": "13:11"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Tiefenbrunnen",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:12",
-        "realtime": "13:12"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:13",
-        "realtime": "13:13"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Frankental",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:14",
-        "realtime": "13:14"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:15",
-        "realtime": "13:15"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:15",
-        "realtime": "13:15"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:18",
-        "realtime": "13:18"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Altstetten N",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:19",
-        "realtime": "13:19"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Albisgütli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:19",
-        "realtime": "13:19"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:19",
-        "realtime": "13:19"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:21",
-        "realtime": "13:21"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Tiefenbrunnen",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:22",
-        "realtime": "13:22"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Frankental",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:22",
-        "realtime": "13:22"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:23",
-        "realtime": "13:23"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:25",
-        "realtime": "13:25"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:26",
-        "realtime": "13:26"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Albisgütli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:26",
-        "realtime": "13:26"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:27",
-        "realtime": "13:27"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Altstetten N",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:29",
-        "realtime": "13:29"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:30",
-        "realtime": "13:30"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:31",
-        "realtime": "13:31"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Tiefenbrunnen",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:32",
-        "realtime": "13:32"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:33",
-        "realtime": "13:33"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:33",
-        "realtime": "13:33"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Frankental",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:37",
-        "realtime": "13:37"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:37",
-        "realtime": "13:37"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:38",
-        "realtime": "13:38"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Altstetten N",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:39",
-        "realtime": "13:39"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:39",
-        "realtime": "13:39"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:41",
-        "realtime": "13:41"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Albisgütli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:41",
-        "realtime": "13:41"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Tiefenbrunnen",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:42",
-        "realtime": "13:42"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:43",
-        "realtime": "13:43"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Frankental",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:44",
-        "realtime": "13:44"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:45",
-        "realtime": "13:45"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:45",
-        "realtime": "13:45"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:48",
-        "realtime": "13:48"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Altstetten N",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:49",
-        "realtime": "13:49"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Albisgütli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:49",
-        "realtime": "13:49"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:49",
-        "realtime": "13:49"
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:51",
-        "realtime": "13:51"
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Tiefenbrunnen",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:52",
-        "realtime": null
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Frankental",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:52",
-        "realtime": "13:52"
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:53",
-        "realtime": null
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:55",
-        "realtime": null
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:56",
-        "realtime": "13:56"
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Albisgütli",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:56",
-        "realtime": null
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:57",
-        "realtime": null
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Altstetten N",
-      "platform": null,
-      "departure": {
-        "scheduled": "13:59",
-        "realtime": null
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:00",
-        "realtime": null
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:01",
-        "realtime": null
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Tiefenbrunnen",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:02",
-        "realtime": null
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:03",
-        "realtime": null
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:03",
-        "realtime": null
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Frankental",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:07",
-        "realtime": null
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:07",
-        "realtime": null
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:08",
-        "realtime": null
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Altstetten N",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:09",
-        "realtime": null
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:09",
-        "realtime": null
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:11",
-        "realtime": null
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Albisgütli",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:11",
-        "realtime": null
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Tiefenbrunnen",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:12",
-        "realtime": null
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:13",
-        "realtime": null
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Frankental",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:14",
-        "realtime": null
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:15",
-        "realtime": null
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:15",
-        "realtime": null
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:18",
-        "realtime": null
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Altstetten N",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:19",
-        "realtime": null
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Albisgütli",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:19",
-        "realtime": null
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:19",
-        "realtime": null
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Holzerhurd",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:21",
-        "realtime": null
-      }
-    },
-    {
-      "name": "4",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#11296f"
-      },
-      "to": "Zürich, Bahnhof Tiefenbrunnen",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:22",
-        "realtime": null
-      }
-    },
-    {
-      "name": "13",
-      "type": "tram",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ffc100"
-      },
-      "to": "Zürich, Frankental",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:22",
-        "realtime": null
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Laubegg",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:23",
-        "realtime": null
-      }
-    },
-    {
-      "name": "32",
-      "type": "bus",
-      "accessible": true,
-      "colors": {
-        "fg": "#000000",
-        "bg": "#ccb2d1"
-      },
-      "to": "Zürich, Strassenverkehrsamt",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:25",
-        "realtime": null
-      }
-    },
-    {
-      "name": "17",
-      "type": "tram",
-      "accessible": false,
-      "colors": {
-        "fg": "#ffffff",
-        "bg": "#8e224d"
-      },
-      "to": "Zürich, Werdhölzli",
-      "platform": null,
-      "departure": {
-        "scheduled": "14:26",
-        "realtime": null
-      }
-    }
-  ]
+  }
 }

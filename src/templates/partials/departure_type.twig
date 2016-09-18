@@ -1,0 +1,9 @@
+{% set trainicons = ['icn','ec','ic','ir','ice','cnl','tgv','en','schiff','sl','fun'] %}
+
+<div class="tfc-departure-type tfc-departure-type--{{ style }} tfc-departure-type{% if departure.name|lower in trainicons %} tfc-departure-type--icon tfc-departure-type--icon-{{departure.name|lower}}{% endif %}{% if departure.colors.bg|lower == "#ffffff" %} tfc-departure-name--white{% endif %}" style="background: {{ departure.colors.bg|lower}}; color: {{ departure.colors.fg|lower }}; border-color: {{ departure.colors.bg|lower}}">
+
+    {% if departure.name|lower not in trainicons %}
+        <div class="tfc-departure-type-text">{{ departure.name }}</div>
+    {% endif %}
+    
+</div>

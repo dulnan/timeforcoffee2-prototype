@@ -1,4 +1,3 @@
-
 <html lang="de">
 
 <head>
@@ -6,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="assets/icons/tfc-touch-icon.png">
     <link href="css/main.css?{{ random(926132218) }}" media="all" rel="stylesheet">
     <title>Time For Coffee 2 – Prototyp</title>
 </head>
 
-<body>
+<body class="">
 <div class="tfc-view tfc-view--home">
-    <header class="tfc-navbar">
+    <header class="tfc-navbar tfc-navbar--home tfc-navbar--fixed">
         <section class="tfc-view-section tfc-view-section--navbar">
             <article class="tfc-view-section-content tfc-navbar-search-container">
                 <input type="text" name="search" placeholder="Haltestelle suchen" class="tfc-input tfc-input-text tfc-navbar-search-input">
@@ -20,6 +20,7 @@
             </article>
             <div class="tfc-navbar-search-overlay-button"></div>
         </section>
+        <aside class="tfc-navbar-border"></aside>
     </header>
 
     <section class="tfc-scrollview tfc-scrollview--home">
@@ -100,27 +101,55 @@
 </div>
 
 <div class="tfc-view tfc-view--detail">
+    <header class="tfc-navbar tfc-navbar--detail">
+        <section class="tfc-navbar-detail-container">
+            <article class="tfc-view-section-content">
+                <h1 class="tfc-h1 tfc-h1--detail">Zürich, Limmatplatz</h1>
+            </article>
+        </section>
+        <aside class="tfc-navbar-border"></aside>
+        <aside class="tfc-navbar-background"></aside>
+    </header>
     <section class="tfc-scrollview tfc-scrollview--detail">
-        <main id="tfc-viewcontainer--detail" class="tfc-viewcontainer">
+        <main id="tfc-viewcontainer--detail" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
             <section class="tfc-view-section">
                 <header class="tfc-view-section-header">
-                    <h1 class="tfc-h1">Zürich, Limmatplatz</h1>
+                    <h1 class="tfc-h1 tfc-view-section-header-h1">Linien</h1>
+                    <button class="tfc-button tfc-button-flat tfc-view-section-header-button" name="tfc-button-filter_station">Filtern</button>
+                </header>
+                <article class="tfc-view-section-content">
+                    <div class="tfc-station-departures-list">
+                        {% for departure in stationDepartures[0].departures %}
+                            {% include "partials/departure_type.twig" with {'departure': departure, 'style': 'station-departure' } %}
+                        {% endfor %}
+                    </div>
+                </article>
+            </section>
+            <section class="tfc-view-section">
+                <header class="tfc-view-section-header">
+                    <h1 class="tfc-h1 tfc-view-section-header-h1">Nächste Abfahrten</h1>
                 </header>
                 <article class="tfc-view-section-content">
                     <ul class="tfc-list tfc-list-classic">
                         {% for departure in departures %}
-                            <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: {{ departure.colors.bg}}; color: {{ departure.colors.fg }}">
-                                    {{ departure.name }}
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    {{ departure.to }}
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    {{ departure.departure.scheduled }}
+                            <li class="tfc-list-item tfc-list-item--departure" data-type="{{ departure.type }}">
+                                {% include "partials/departure_type.twig" with {'departure': departure, 'style': 'list' } %}
+                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        {{ departure.to }}
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        {{ departure.departure.scheduled }}
+                                    </div>
                                 </div>
                                 <div class="tfc-list-item--departure-countdown">
-                                    0'
+                                    {% set splited = departure.departure.scheduled|split(":") %}
+                                    {% set seconds = ((splited[0] * 60) + splited[1]) - 768 %}
+                                    {% if seconds == 0 %}
+                                        <span class="tfc-departing-now">54</span>
+                                    {% else %}
+                                        {{ seconds }}'
+                                    {% endif %}
                                 </div>
                             </li>
                         {% endfor %}

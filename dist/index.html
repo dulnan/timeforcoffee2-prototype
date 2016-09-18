@@ -1,4 +1,3 @@
-
 <html lang="de">
 
 <head>
@@ -6,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link href="css/main.css?365409419" media="all" rel="stylesheet">
+    <link rel="apple-touch-icon" href="assets/icons/tfc-touch-icon.png">
+    <link href="css/main.css?733367347" media="all" rel="stylesheet">
     <title>Time For Coffee 2 – Prototyp</title>
 </head>
 
-<body>
+<body class="">
 <div class="tfc-view tfc-view--home">
-    <header class="tfc-navbar">
+    <header class="tfc-navbar tfc-navbar--home tfc-navbar--fixed">
         <section class="tfc-view-section tfc-view-section--navbar">
             <article class="tfc-view-section-content tfc-navbar-search-container">
                 <input type="text" name="search" placeholder="Haltestelle suchen" class="tfc-input tfc-input-text tfc-navbar-search-input">
@@ -20,6 +20,7 @@
             </article>
             <div class="tfc-navbar-search-overlay-button"></div>
         </section>
+        <aside class="tfc-navbar-border"></aside>
     </header>
 
     <section class="tfc-scrollview tfc-scrollview--home">
@@ -100,1413 +101,706 @@
 </div>
 
 <div class="tfc-view tfc-view--detail">
+    <header class="tfc-navbar tfc-navbar--detail">
+        <section class="tfc-navbar-detail-container">
+            <article class="tfc-view-section-content">
+                <h1 class="tfc-h1 tfc-h1--detail">Zürich, Limmatplatz</h1>
+            </article>
+        </section>
+        <aside class="tfc-navbar-border"></aside>
+        <aside class="tfc-navbar-background"></aside>
+    </header>
     <section class="tfc-scrollview tfc-scrollview--detail">
-        <main id="tfc-viewcontainer--detail" class="tfc-viewcontainer">
+        <main id="tfc-viewcontainer--detail" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
             <section class="tfc-view-section">
                 <header class="tfc-view-section-header">
-                    <h1 class="tfc-h1">Zürich, Limmatplatz</h1>
+                    <h1 class="tfc-h1 tfc-view-section-header-h1">Linien</h1>
+                    <button class="tfc-button tfc-button-flat tfc-view-section-header-button" name="tfc-button-filter_station">Filtern</button>
+                </header>
+                <article class="tfc-view-section-content">
+                    <div class="tfc-station-departures-list">
+                                                    
+<div class="tfc-departure-type tfc-departure-type--station-departure tfc-departure-type" style="background: #11296f; color: #ffffff; border-color: #11296f">
+
+            <div class="tfc-departure-type-text">4</div>
+        
+</div>                                                    
+<div class="tfc-departure-type tfc-departure-type--station-departure tfc-departure-type" style="background: #ca7d3c; color: #ffffff; border-color: #ca7d3c">
+
+            <div class="tfc-departure-type-text">6</div>
+        
+</div>                                                    
+<div class="tfc-departure-type tfc-departure-type--station-departure tfc-departure-type" style="background: #ffc100; color: #000000; border-color: #ffc100">
+
+            <div class="tfc-departure-type-text">13</div>
+        
+</div>                                                    
+<div class="tfc-departure-type tfc-departure-type--station-departure tfc-departure-type" style="background: #8e224d; color: #ffffff; border-color: #8e224d">
+
+            <div class="tfc-departure-type-text">17</div>
+        
+</div>                                                    
+<div class="tfc-departure-type tfc-departure-type--station-departure tfc-departure-type" style="background: #ccb2d1; color: #000000; border-color: #ccb2d1">
+
+            <div class="tfc-departure-type-text">32</div>
+        
+</div>                                                    
+<div class="tfc-departure-type tfc-departure-type--station-departure tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N1</div>
+        
+</div>                                                    
+<div class="tfc-departure-type tfc-departure-type--station-departure tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N4</div>
+        
+</div>                                                    
+<div class="tfc-departure-type tfc-departure-type--station-departure tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N5</div>
+        
+</div>                                                    
+<div class="tfc-departure-type tfc-departure-type--station-departure tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N7</div>
+        
+</div>                                                    
+<div class="tfc-departure-type tfc-departure-type--station-departure tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N8</div>
+        
+</div>                                                    
+<div class="tfc-departure-type tfc-departure-type--station-departure tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N13</div>
+        
+</div>                                            </div>
+                </article>
+            </section>
+            <section class="tfc-view-section">
+                <header class="tfc-view-section-header">
+                    <h1 class="tfc-h1 tfc-view-section-header-h1">Nächste Abfahrten</h1>
                 </header>
                 <article class="tfc-view-section-content">
                     <ul class="tfc-list tfc-list-classic">
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:48
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Altstetten N
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:49
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Albisgütli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:49
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:49
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:51
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Tiefenbrunnen
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:52
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Frankental
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:52
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:53
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:55
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:56
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Albisgütli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:56
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:57
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Altstetten N
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    12:59
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:00
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:01
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Tiefenbrunnen
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:02
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:03
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:03
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Frankental
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:07
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:07
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:08
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Altstetten N
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:09
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:09
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:11
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Albisgütli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:11
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Tiefenbrunnen
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:12
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:13
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Frankental
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:14
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:15
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:15
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:18
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Altstetten N
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:19
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Albisgütli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:19
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:19
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:21
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Tiefenbrunnen
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:22
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Frankental
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:22
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:23
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:25
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:26
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Albisgütli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:26
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:27
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Altstetten N
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:29
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:30
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:31
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Tiefenbrunnen
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:32
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:33
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:33
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Frankental
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:37
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:37
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:38
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Altstetten N
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:39
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:39
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:41
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Albisgütli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:41
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Tiefenbrunnen
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:42
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:43
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Frankental
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:44
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:45
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:45
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:48
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Altstetten N
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:49
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Albisgütli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:49
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:49
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:51
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Tiefenbrunnen
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:52
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Frankental
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:52
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:53
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:55
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:56
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Albisgütli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:56
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:57
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Altstetten N
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    13:59
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:00
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:01
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Tiefenbrunnen
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:02
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:03
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:03
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Frankental
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:07
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:07
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:08
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Altstetten N
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:09
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:09
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:11
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Albisgütli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:11
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Tiefenbrunnen
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:12
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:13
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Frankental
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:14
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:15
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:15
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:18
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Altstetten N
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:19
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Albisgütli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:19
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:19
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Holzerhurd
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:21
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #11296f; color: #ffffff">
-                                    4
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Bahnhof Tiefenbrunnen
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:22
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ffc100; color: #000000">
-                                    13
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Frankental
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:22
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Laubegg
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:23
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #ccb2d1; color: #000000">
-                                    32
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Strassenverkehrsamt
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:25
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
-                            </li>
-                                                    <li class="tfc-list-item tfc-list-item--departure">
-                                <div class="tfc-list-item--departure-name" style="background: #8e224d; color: #ffffff">
-                                    17
-                                </div>
-                                <div class="tfc-list-item--departure-to">
-                                    Zürich, Werdhölzli
-                                </div>
-                                <div class="tfc-list-item--departure-time">
-                                    14:26
-                                </div>
-                                <div class="tfc-list-item--departure-countdown">
-                                    0'
-                                </div>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #e20a16; color: #ffffff; border-color: #e20a16">
+
+            <div class="tfc-departure-type-text">2</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Bahnhof Tiefenbrunnen
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        12:48
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    <span class="tfc-departing-now">54</span>
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #00892f; color: #ffffff; border-color: #00892f">
+
+            <div class="tfc-departure-type-text">3</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Albisrieden
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        12:49
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    1'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #11296f; color: #ffffff; border-color: #11296f">
+
+            <div class="tfc-departure-type-text">4</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Bahnhof Altstetten N
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        12:49
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    1'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #734522; color: #ffffff; border-color: #734522">
+
+            <div class="tfc-departure-type-text">5</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Zoo
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        12:51
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    3'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #ca7d3c; color: #ffffff; border-color: #ca7d3c">
+
+            <div class="tfc-departure-type-text">6</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Bahnhofplatz/HB
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        12:53
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    5'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #000000; color: #ffffff; border-color: #000000">
+
+            <div class="tfc-departure-type-text">7</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Bahnhof Stettbach
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        12:57
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    9'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #8ab51f; color: #000000; border-color: #8ab51f">
+
+            <div class="tfc-departure-type-text">8</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Klusplatz
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        12:59
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    11'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #11296f; color: #ffffff; border-color: #11296f">
+
+            <div class="tfc-departure-type-text">9</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Hirzenbach
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        13:00
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    12'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #e12472; color: #ffffff; border-color: #e12472">
+
+            <div class="tfc-departure-type-text">10</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich Flughafen, Fracht
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        13:03
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    15'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #00892f; color: #ffffff; border-color: #00892f">
+
+            <div class="tfc-departure-type-text">11</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Auzelg
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        13:06
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    18'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #92d6e3; color: #000000; border-color: #92d6e3">
+
+            <div class="tfc-departure-type-text">12</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich Flughafen, Fracht
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        13:11
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    23'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #ffc100; color: #000000; border-color: #ffc100">
+
+            <div class="tfc-departure-type-text">13</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Albisgütli
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        13:16
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    28'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #008dc5; color: #ffffff; border-color: #008dc5">
+
+            <div class="tfc-departure-type-text">14</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Triemli
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        13:26
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    38'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="tram">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #8e224d; color: #ffffff; border-color: #8e224d">
+
+            <div class="tfc-departure-type-text">17</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Werdhölzli
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        13:38
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    50'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="bus">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #a5a2c6; color: #ffffff; border-color: #a5a2c6">
+
+            <div class="tfc-departure-type-text">31</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Hegibachplatz
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        13:41
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    53'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="bus">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #ccb2d1; color: #000000; border-color: #ccb2d1">
+
+            <div class="tfc-departure-type-text">32</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Holzerhurd
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        13:46
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    58'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="bus">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #dad69c; color: #000000; border-color: #dad69c">
+
+            <div class="tfc-departure-type-text">33</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Triemli
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        13:51
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    63'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="bus">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-name--white" style="background: #ffffff; color: #000000; border-color: #ffffff">
+
+            <div class="tfc-departure-type-text">39</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Letzistrasse
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        13:59
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    71'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="bus">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N8</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Albisriederplatz
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:00
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    72'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="bus">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #cac0b6; color: #000000; border-color: #cac0b6">
+
+            <div class="tfc-departure-type-text">62</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Schwamendingerplatz
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:02
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    74'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="bus">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #c6a693; color: #000000; border-color: #c6a693">
+
+            <div class="tfc-departure-type-text">72</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Milchbuck
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:07
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    79'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="bus">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-name--white" style="background: #ffffff; color: #000000; border-color: #ffffff">
+
+            <div class="tfc-departure-type-text">912</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Zürich, Bellevue
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:11
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    83'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-name--white" style="background: #ffffff; color: #e00000; border-color: #ffffff">
+
+            <div class="tfc-departure-type-text">RE</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Schaffhausen
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:13
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    85'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-type--icon tfc-departure-type--icon-ic" style="background: #e00000; color: #ffffff; border-color: #e00000">
+
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Romanshorn
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:18
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    90'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-type--icon tfc-departure-type--icon-icn" style="background: #e00000; color: #ffffff; border-color: #e00000">
+
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Genève-Aéroport
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:19
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    91'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-type--icon tfc-departure-type--icon-ice" style="background: #e00000; color: #ffffff; border-color: #e00000">
+
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Basel Bad Bf
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:24
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    96'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-type--icon tfc-departure-type--icon-ir" style="background: #e00000; color: #ffffff; border-color: #e00000">
+
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Luzern
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:29
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    101'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type" style="background: #e00000; color: #ffffff; border-color: #e00000">
+
+            <div class="tfc-departure-type-text">VAE</div>
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Luzern
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:31
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    103'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-type--icon tfc-departure-type--icon-schiff tfc-departure-name--white" style="background: #ffffff; color: #000000; border-color: #ffffff">
+
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Konstanz Hafen
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:38
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    110'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-type--icon tfc-departure-type--icon-cnl" style="background: #e00000; color: #ffffff; border-color: #e00000">
+
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Hamburg
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:42
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    114'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-type--icon tfc-departure-type--icon-ec" style="background: #e00000; color: #ffffff; border-color: #e00000">
+
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        München
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:49
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    121'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-type--icon tfc-departure-type--icon-en" style="background: #e00000; color: #ffffff; border-color: #e00000">
+
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Prag
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:51
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    123'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-type--icon tfc-departure-type--icon-tgv" style="background: #e00000; color: #ffffff; border-color: #e00000">
+
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Paris
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:57
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    129'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-type--icon tfc-departure-type--icon-fun tfc-departure-name--white" style="background: #ffffff; color: #000000; border-color: #ffffff">
+
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Marzili
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        14:59
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    131'
+                                                                    </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--departure" data-type="train">
+                                
+<div class="tfc-departure-type tfc-departure-type--list tfc-departure-type tfc-departure-type--icon tfc-departure-type--icon-sl tfc-departure-name--white" style="background: #ffffff; color: #000000; border-color: #ffffff">
+
+        
+</div>                                <div class="tfc-list-item--departure-middle">
+                                    <div class="tfc-list-item--departure-to">
+                                        Flims Dorf BFL
+                                    </div>
+                                    <div class="tfc-list-item--departure-time">
+                                        15:05
+                                    </div>
+                                </div>
+                                <div class="tfc-list-item--departure-countdown">
+                                                                                                                                                    137'
+                                                                    </div>
                             </li>
                                             </ul>
                 </article>
@@ -1515,7 +809,7 @@
     </section>
 </div>
 
-<script src="js/main.js?569124171"></script>
+<script src="js/main.js?186303135"></script>
 </body>
 
 </html>

@@ -1,6 +1,16 @@
 @import 'partials/normalize';
 @import 'partials/variables';
 
+@font-face {
+  font-family: 'trainicons';
+  src:
+    url('../assets/fonts/trainicons.ttf?23ib9y') format('truetype'),
+    url('../assets/fonts/trainicons.woff?23ib9y') format('woff'),
+    url('../assets/fonts/trainicons.svg?23ib9y#trainicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
     background: white;
     overflow: hidden;
@@ -11,7 +21,8 @@ body {
     font-family: -apple-system, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 16px;
+    // font-size: 16px;
+    font: -apple-system-body;
     overflow: hidden;
     height: 100vh;
 }
@@ -21,8 +32,14 @@ body {
 
 // Typography
 .tfc-h1 {
-    font-weight: 700;
-    font-size: 24px;
+    // font: -apple-system-headline;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tfc-h1--detail {
+    transform-origin: left center;
+    font-size: 26px;
 }
 
 // Forms
@@ -99,10 +116,19 @@ body {
     right: 0;
 }
 
+.tfc-scrollview--locked {
+    overflow: hidden;
+    -webkit-overflow-scrolling: auto;
+}
+
+.tfc-scrollview--detail.tfc-scrollview--locked {
+    box-shadow: 0px 0px 8px $grey-20-translucent;
+}
+
 .tfc-viewcontainer {
     white-space: nowrap;
     box-sizing: border-box;
-    padding-top: 10px;
+    // padding-top: 10px;
     position: absolute;
     top: 0;
     left: 0;
@@ -114,14 +140,19 @@ body {
 }
 
 .tfc-viewcontainer--with-navbar {
-    padding-top: 70px;
+    // a padding-top is being added via JS here
+    // it's the height of the navbar belonging
+    // to this viewcontainer
 }
 
 .tfc-view-section {
     width: 100%;
     padding: 10px 0;
     box-sizing: border-box;
+    border-bottom: 1px solid $grey-20;
 }
+
+
 
 .tfc-scrollview--home {
     will-change: transform, filter;
@@ -134,6 +165,10 @@ body {
     background: rgba(255,255,255,0.9);
     will-change: opacity;
     perspective: 0;
+}
+
+.tfc-scrollview--detail {
+    z-index: 1000;
 }
 
 // Viewcontainer States
@@ -165,18 +200,16 @@ body {
 
 .tfc--prepare-viewstate-detail {
     .tfc-view--home {
-        transition: 0.6s cubic-bezier(.61,0,.28,1);
         transform-origin: center bottom;
     }
     .tfc-view--detail {
         display: block;
-        transition: 0.6s cubic-bezier(.61,0,.28,1);
     }
 }
 
 .tfc--viewstate-detail {
     .tfc-view--home {
-        opacity: 0.5;
+        opacity: 0;
         transform: scale(0.9);
 
     }
@@ -185,20 +218,86 @@ body {
     }
 }
 
+.tfc-view--transition {
+    transition: 0.6s cubic-bezier(.61,0,.28,1);
+}
+
+.tfc-view--transition-back {
+    transition: 0.6s cubic-bezier(0.32, 0.8, 0.35, 1);
+}
+
 
 
 // Navigation Bar
 .tfc-navbar {
     z-index: 1000;
-    position: fixed;
     left: 0;
-    top: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.97);
     .tfc--backdropFilter & {
         -webkit-backdrop-filter: blur(16px);
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.8);
     }
+}
+
+.tfc-navbar-border {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 5px;
+    bottom: -5px;
+    left: 0;
+    background-color: $grey-20-translucent;
+    transform: scaleY(0.1);
+    transform-origin: top;
+    .tfc--backdropFilter & {
+        -webkit-backdrop-filter: blur(6px);
+        background-color: $grey-20-translucent;
+    }
+    .tfc--retina & {
+        height: 5px;
+        bottom: -5px;
+
+    }
+}
+
+.tfc-navbar-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/images/limmatplatz-map.png");
+    background-size: 100%;
+    background-position: 0% -59px;
+}
+
+.tfc-navbar--home {
+    top: -10px;
+    padding-top: 10px;
+}
+
+.tfc-navbar--detail {
+    top: 0;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    max-height: 160px;
+    height: 160px;
+    z-index: 900;
+    position: relative;
+}
+
+.tfc-navbar--fixed {
+    position: fixed;
+    z-index: 1100;
+    .tfc-navbar-border {
+        display: block;
+    }
+    // box-shadow: 0 1px 0px $grey-20-translucent;
+    // .tfc--retina & {
+    //     box-shadow: 0 1px 0px $grey-20-translucent;
+    // }
 }
 
 .tfc-navbar--transition {
@@ -206,7 +305,6 @@ body {
 }
 
 .tfc-view-section--navbar {
-    // border-bottom: 1px solid $grey-20;
     .tfc--retina & {
         // border-width: 0.5px;
     }
@@ -238,7 +336,7 @@ body {
     transition: 0.4s flex;
     height: 40px;
     .tfc--viewstate-search & {
-        flex: 0 0 87px;
+        flex: 0 0 95px;
     }
 }
 
@@ -255,7 +353,11 @@ body {
 
 
 
-
+.tfc-navbar-detail-container {
+    padding: 0 10px;
+    position: relative;
+    z-index: 10;
+}
 
 
 
@@ -264,6 +366,14 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
+}
+
+.tfc-view-section-header--detail {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px 10px;
 }
 
 .tfc-view-section-header-h1 {
@@ -296,39 +406,115 @@ body {
     }
 }
 
+.tfc-station-departures-list {
+    display: flex;
+    padding: 10px 10px;
+    transform-origin: left center;
+}
 
+.tfc-departure-type {
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: bold;
+    border-radius: 0.1666em;
+    line-height: 0;
+    border: 0.1em solid;
+    overflow: hidden;
+}
 
+.tfc-departure-type--station-departure {
+    font-size: 12px;
+    margin-right: 2px;
+}
 
-
+.tfc-departure-type--list {
+    font-size: 24px;
+}
 
 .tfc-list-item--departure {
     font-size: 16px;
-    padding: 20px 0 20px 0px;
+    padding: 16px 0 16px 0px;
     margin-left: 10px;
     border-bottom: 1px solid $grey-20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .tfc--retina & {
         border-width: 0.5px;
     }
 }
 
-.tfc-list-item--departure-name {
-    width: 24px;
-    height: 24px;
-    float: left;
+.tfc-departure-type--icon:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'trainicons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    font-size: 0.5em;
+}
+
+.tfc-departure-type-text {
+    width: 100%;
+    font-size: 0.75em;
+}
+
+.tfc-departure-name--white {
+    border-color: black !important;
+}
+
+.tfc-list-item--departure-middle {
+    flex: 1 1;
+    padding-left: 10px;
 }
 
 .tfc-list-item--departure-to {
-    float: left;
+    font: -apple-system-short-subheadline;
 }
 
 .tfc-list-item--departure-time {
-    float: left;
+    font: -apple-system-caption2;
+    color: $grey-50;
+    margin-top: -2px;
 }
 
 .tfc-list-item--departure-countdown {
-    float: right;
+    flex: 0 0 40px;
+    font-size: 20px;
+    text-align: right;
+    padding-right: 10px;
 }
 
+@keyframes blink {
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    0% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+}
+
+.tfc-departing-now {
+    color: $red;
+    animation: blink 1s infinite;
+    &:after {
+        content: "s";
+    }
+}
 
 
 .tfc-list--favorites {
@@ -359,4 +545,70 @@ body {
     &:nth-child(4) span {
         background: $green;
     }
+}
+
+
+// Train Icons
+
+.tfc-departure-type--icon-icn {
+  &:before {
+    content: $tfc-trainicon-icn;
+    font-size: 0.65em;
+  }
+}
+.tfc-departure-type--icon-ec {
+  &:before {
+    content: $tfc-trainicon-ec;
+    font-size: 0.4em;
+  }
+}
+.tfc-departure-type--icon-ic {
+  &:before {
+    content: $tfc-trainicon-ic;
+  }
+}
+.tfc-departure-type--icon-ir {
+  &:before {
+    content: $tfc-trainicon-ir;
+  }
+}
+.tfc-departure-type--icon-ice {
+  &:before {
+    content: $tfc-trainicon-ice;
+    font-size: 0.65em;
+  }
+}
+.tfc-departure-type--icon-cnl {
+  &:before {
+    content: $tfc-trainicon-cnl;
+  }
+}
+.tfc-departure-type--icon-tgv {
+  &:before {
+    content: $tfc-trainicon-tgv;
+  }
+}
+.tfc-departure-type--icon-en {
+  &:before {
+    content: $tfc-trainicon-en;
+    font-size: 0.35em;
+  }
+}
+.tfc-departure-type--icon-schiff {
+  &:before {
+    content: $tfc-trainicon-schiff;
+    font-size: 0.9em;
+  }
+}
+.tfc-departure-type--icon-sl {
+  &:before {
+    content: $tfc-trainicon-seilbahn;
+    font-size: 1em;
+  }
+}
+.tfc-departure-type--icon-fun {
+  &:before {
+    content: $tfc-trainicon-zahnradbahn;
+    font-size: 1em;
+  }
 }
