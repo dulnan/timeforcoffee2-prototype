@@ -23,9 +23,9 @@
         <aside class="tfc-navbar-border"></aside>
     </header>
 
-    <section class="tfc-scrollview tfc-scrollview--home">
+    <section class="tfc-scrollview tfc-scrollview--enabled tfc-scrollview--home">
         <main id="tfc-viewcontainer--home" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
-            <section class="tfc-view-section">
+            <section class="tfc-view-section tfc-view-section--border">
                 <header class="tfc-view-section-header">
                     <h1 class="tfc-h1 tfc-view-section-header-h1">Favoriten</h1>
                     <button class="tfc-button tfc-button-flat tfc-view-section-header-button" name="tfc-button-edit_favorites">Bearbeiten</button>
@@ -70,7 +70,7 @@
         </main>
     </section>
 
-    <section class="tfc-scrollview tfc-scrollview--searchresults">
+    <section class="tfc-scrollview tfc-scrollview--enabled tfc-scrollview--searchresults">
         <aside id="tfc-viewcontainer--searchresults" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
             <section class="tfc-view-section">
                 <article class="tfc-view-section-content">
@@ -103,19 +103,19 @@
 <div class="tfc-view tfc-view--detail">
     <header class="tfc-navbar tfc-navbar--detail">
         <section class="tfc-navbar-detail-container">
-            <article class="tfc-view-section-content">
-                <h1 class="tfc-h1 tfc-h1--detail">Zürich, Limmatplatz</h1>
+            <article class="tfc-view-section-header">
+                <h1 class="tfc-h1 tfc-view-section-header-h1 tfc-h1--detail">Zürich, Limmatplatz</h1>
+                <button class="tfc-button tfc-button-flat tfc-view-section-header-button tfc-filter-button" name="tfc-button-filter_station">Filtern</button>
             </article>
         </section>
-        <aside class="tfc-navbar-border"></aside>
+        <aside class="tfc-navbar-border tfc-navbar-border--detail"></aside>
         <aside class="tfc-navbar-background"></aside>
     </header>
-    <section class="tfc-scrollview tfc-scrollview--detail">
-        <main id="tfc-viewcontainer--detail" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
+    <section class="tfc-scrollview tfc-scrollview--enabled tfc-scrollview--detail">
+        <main class="tfc-viewcontainer tfc-viewcontainer--detail tfc-viewcontainer--with-navbar">
             <section class="tfc-view-section">
                 <header class="tfc-view-section-header">
                     <h1 class="tfc-h1 tfc-view-section-header-h1">Linien</h1>
-                    <button class="tfc-button tfc-button-flat tfc-view-section-header-button" name="tfc-button-filter_station">Filtern</button>
                 </header>
                 <article class="tfc-view-section-content">
                     <div class="tfc-station-departures-list">
@@ -155,6 +155,21 @@
                         {% endfor %}
                     </ul>
                 </article>
+            </section>
+        </main>
+    </section>
+    <section class="tfc-scrollview tfc-scrollview--detail-edit">
+        <main class="tfc-viewcontainer tfc-viewcontainer--detail-edit">
+            <section class="tfc-view-section">
+                <ul class="tfc-list tfc-list-classic">
+                        {% for departure in stationDepartures[0].departures %}
+                            <li class="tfc-list-item tfc-list-item--detail-edit" data-type="{{ departure.type }}">
+                                <div class="tfc-departure-type-wrapper">
+                                    {% include "partials/departure_type.twig" with {'departure': departure, 'style': 'detail-edit' } %}
+                                </div>
+                            </li>
+                        {% endfor %}
+                </ul>
             </section>
         </main>
     </section>

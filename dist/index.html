@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-icon" href="assets/icons/tfc-touch-icon.png">
-    <link href="css/main.css?733367347" media="all" rel="stylesheet">
+    <link href="css/main.css?494922891" media="all" rel="stylesheet">
     <title>Time For Coffee 2 – Prototyp</title>
 </head>
 
@@ -23,9 +23,9 @@
         <aside class="tfc-navbar-border"></aside>
     </header>
 
-    <section class="tfc-scrollview tfc-scrollview--home">
+    <section class="tfc-scrollview tfc-scrollview--enabled tfc-scrollview--home">
         <main id="tfc-viewcontainer--home" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
-            <section class="tfc-view-section">
+            <section class="tfc-view-section tfc-view-section--border">
                 <header class="tfc-view-section-header">
                     <h1 class="tfc-h1 tfc-view-section-header-h1">Favoriten</h1>
                     <button class="tfc-button tfc-button-flat tfc-view-section-header-button" name="tfc-button-edit_favorites">Bearbeiten</button>
@@ -70,7 +70,7 @@
         </main>
     </section>
 
-    <section class="tfc-scrollview tfc-scrollview--searchresults">
+    <section class="tfc-scrollview tfc-scrollview--enabled tfc-scrollview--searchresults">
         <aside id="tfc-viewcontainer--searchresults" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
             <section class="tfc-view-section">
                 <article class="tfc-view-section-content">
@@ -103,19 +103,19 @@
 <div class="tfc-view tfc-view--detail">
     <header class="tfc-navbar tfc-navbar--detail">
         <section class="tfc-navbar-detail-container">
-            <article class="tfc-view-section-content">
-                <h1 class="tfc-h1 tfc-h1--detail">Zürich, Limmatplatz</h1>
+            <article class="tfc-view-section-header">
+                <h1 class="tfc-h1 tfc-view-section-header-h1 tfc-h1--detail">Zürich, Limmatplatz</h1>
+                <button class="tfc-button tfc-button-flat tfc-view-section-header-button tfc-filter-button" name="tfc-button-filter_station">Filtern</button>
             </article>
         </section>
-        <aside class="tfc-navbar-border"></aside>
+        <aside class="tfc-navbar-border tfc-navbar-border--detail"></aside>
         <aside class="tfc-navbar-background"></aside>
     </header>
-    <section class="tfc-scrollview tfc-scrollview--detail">
-        <main id="tfc-viewcontainer--detail" class="tfc-viewcontainer tfc-viewcontainer--with-navbar">
+    <section class="tfc-scrollview tfc-scrollview--enabled tfc-scrollview--detail">
+        <main class="tfc-viewcontainer tfc-viewcontainer--detail tfc-viewcontainer--with-navbar">
             <section class="tfc-view-section">
                 <header class="tfc-view-section-header">
                     <h1 class="tfc-h1 tfc-view-section-header-h1">Linien</h1>
-                    <button class="tfc-button tfc-button-flat tfc-view-section-header-button" name="tfc-button-filter_station">Filtern</button>
                 </header>
                 <article class="tfc-view-section-content">
                     <div class="tfc-station-departures-list">
@@ -807,9 +807,116 @@
             </section>
         </main>
     </section>
+    <section class="tfc-scrollview tfc-scrollview--detail-edit">
+        <main class="tfc-viewcontainer tfc-viewcontainer--detail-edit">
+            <section class="tfc-view-section">
+                <ul class="tfc-list tfc-list-classic">
+                                                    <li class="tfc-list-item tfc-list-item--detail-edit" data-type="tram">
+                                <div class="tfc-departure-type-wrapper">
+                                    
+<div class="tfc-departure-type tfc-departure-type--detail-edit tfc-departure-type" style="background: #11296f; color: #ffffff; border-color: #11296f">
+
+            <div class="tfc-departure-type-text">4</div>
+        
+</div>                                </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--detail-edit" data-type="tram">
+                                <div class="tfc-departure-type-wrapper">
+                                    
+<div class="tfc-departure-type tfc-departure-type--detail-edit tfc-departure-type" style="background: #ca7d3c; color: #ffffff; border-color: #ca7d3c">
+
+            <div class="tfc-departure-type-text">6</div>
+        
+</div>                                </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--detail-edit" data-type="tram">
+                                <div class="tfc-departure-type-wrapper">
+                                    
+<div class="tfc-departure-type tfc-departure-type--detail-edit tfc-departure-type" style="background: #ffc100; color: #000000; border-color: #ffc100">
+
+            <div class="tfc-departure-type-text">13</div>
+        
+</div>                                </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--detail-edit" data-type="tram">
+                                <div class="tfc-departure-type-wrapper">
+                                    
+<div class="tfc-departure-type tfc-departure-type--detail-edit tfc-departure-type" style="background: #8e224d; color: #ffffff; border-color: #8e224d">
+
+            <div class="tfc-departure-type-text">17</div>
+        
+</div>                                </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--detail-edit" data-type="bus">
+                                <div class="tfc-departure-type-wrapper">
+                                    
+<div class="tfc-departure-type tfc-departure-type--detail-edit tfc-departure-type" style="background: #ccb2d1; color: #000000; border-color: #ccb2d1">
+
+            <div class="tfc-departure-type-text">32</div>
+        
+</div>                                </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--detail-edit" data-type="bus">
+                                <div class="tfc-departure-type-wrapper">
+                                    
+<div class="tfc-departure-type tfc-departure-type--detail-edit tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N1</div>
+        
+</div>                                </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--detail-edit" data-type="bus">
+                                <div class="tfc-departure-type-wrapper">
+                                    
+<div class="tfc-departure-type tfc-departure-type--detail-edit tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N4</div>
+        
+</div>                                </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--detail-edit" data-type="bus">
+                                <div class="tfc-departure-type-wrapper">
+                                    
+<div class="tfc-departure-type tfc-departure-type--detail-edit tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N5</div>
+        
+</div>                                </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--detail-edit" data-type="bus">
+                                <div class="tfc-departure-type-wrapper">
+                                    
+<div class="tfc-departure-type tfc-departure-type--detail-edit tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N7</div>
+        
+</div>                                </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--detail-edit" data-type="bus">
+                                <div class="tfc-departure-type-wrapper">
+                                    
+<div class="tfc-departure-type tfc-departure-type--detail-edit tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N8</div>
+        
+</div>                                </div>
+                            </li>
+                                                    <li class="tfc-list-item tfc-list-item--detail-edit" data-type="bus">
+                                <div class="tfc-departure-type-wrapper">
+                                    
+<div class="tfc-departure-type tfc-departure-type--detail-edit tfc-departure-type" style="background: #000000; color: #fff200; border-color: #000000">
+
+            <div class="tfc-departure-type-text">N13</div>
+        
+</div>                                </div>
+                            </li>
+                                        </ul>
+            </section>
+        </main>
+    </section>
 </div>
 
-<script src="js/main.js?186303135"></script>
+<script src="js/main.js?321236837"></script>
 </body>
 
 </html>

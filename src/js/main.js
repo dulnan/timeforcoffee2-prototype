@@ -32,7 +32,9 @@ function init() {
     // to the height of the navbar that belongs to them
     $(".tfc-viewcontainer--with-navbar").each(function() {
         // console.log();
-        $(this).css("padding-top", ($(this).parent().siblings(".tfc-navbar").height()) + "px");
+        $(this).css("padding-top", function() {
+            return (parseInt($(this).css("padding-top"),10) + $(this).parent().siblings(".tfc-navbar").height()) + "px";
+        });
     });
 
     $(".tfc-navbar").each(function() {
@@ -42,24 +44,94 @@ function init() {
     });
 
 
-
-
     // Navbar Searching
+
+    // Switch to ViewState Search
     $(".tfc-navbar-search-overlay-button").click(function(e) {
         e.stopPropagation();
         $("body").addClass("tfc--prepare-viewstate-search");
         setTimeout(function() {
             $("body").addClass("tfc--viewstate-search");
         }, 50);
+        setTimeout(function() {
+            $("body").addClass("tfc--finish-viewstate-search");
+        }, 320);
 
         $(".tfc-navbar-search-input").focus();
     })
 
+    // Switch Back from ViewState Search
     $(".tfc-navbar-search-button").click(function() {
-        $("body").removeClass("tfc--viewstate-search");
+        $("body").removeClass("tfc--finish-viewstate-search");
+        setTimeout(function() {
+            $("body").removeClass("tfc--viewstate-search");
+        }, 50);
         setTimeout(function() {
             $("body").removeClass("tfc--prepare-viewstate-search");
         }, 520);
+    })
+
+
+    function getStationDepartureRect() {
+
+    }
+
+
+    // Switch to ViewState Detail Edit
+    $(".tfc-filter-button").click(function(e) {
+        e.stopPropagation();
+        $("body").addClass("tfc--prepare-viewstate-detail-edit");
+
+        var sr = $(".tfc-departure-type--station-departure")[0].getBoundingClientRect();
+        var er = $(".tfc-departure-type--detail-edit")[0].getBoundingClientRect();
+
+        var sTop  = sr.top;
+        var eLeft = er.left;
+
+        var sListWidthMargin = $(".tfc-departure-type--station-departure").outerWidth(true);
+        var sListWidth = $(".tfc-departure-type--station-departure").outerWidth();
+        var eListHeight = $(".tfc-list-item--detail-edit").outerHeight();
+
+        $(".tfc-departure-type--detail-edit").each(function(i) {
+            sLeft = (sr.left + sListWidthMargin * i);
+            eTop  = (er.top + eListHeight * i);
+
+            var x = Math.abs(eLeft - sLeft);
+
+            if (eTop - sTop > 0) {
+                var y = "-" + Math.abs(eTop - sTop);
+            } else {
+                var y = Math.abs((sTop - eTop));
+            }
+
+            // because we use transition-origin: center, subtract the width of the station
+            // departure icon from the final calculations
+
+            x = x - sListWidth;
+            y = y - sListWidth;
+
+            $(this).css("transform", "translate(" + x + "px," + y + "px) scale(0.33333333)");
+        });
+
+        setTimeout(function() {
+            $(".tfc-departure-type--detail-edit").each(function(i) {
+                var d = 1 - (i * 0.07);
+                $(this).css("transition-delay", (d) + "s");
+            });
+            $(".tfc-departure-type--detail-edit").addClass("tfc-departure-type--detail-edit--original-pos");
+            $("body").addClass("tfc--viewstate-detail-edit");
+        }, 50);
+
+        setTimeout(function() {
+            $(".tfc-departure-type--detail-edit").css("transition-delay", "");
+            $("body").addClass("tfc--finish-viewstate-detail-edit");
+            $("tfc-scrollview--detail-edit").addClass("tfc-scrollview--enabled");
+        }, 150);
+
+        setTimeout(function() {
+            $(".tfc-departure-type--detail-edit").addClass("tfc-departure-type--detail-edit--original-scale");
+        }, 1500);
+
     })
 
     var lastDetailScrollY;
@@ -75,7 +147,7 @@ function init() {
     var whereToTransitionTo;
 
     // Hacky Shit
-    $(".tfc-scrollview").bind('touchstart', function(e) {
+    $(".tfc-scrollview--enabled").bind('touchstart', function(e) {
         var touch = e.changedTouches[0];
 
         touchDistanceStart = false;
@@ -107,7 +179,7 @@ function init() {
         }
     });
 
-    $(".tfc-scrollview").bind('touchmove', function(e) {
+    $(".tfc-scrollview--enabled").bind('touchmove', function(e) {
         $(this).data("moved", true);
 
         var touch = e.changedTouches[0];
@@ -167,21 +239,43 @@ function init() {
         var scrollTop = $(this).scrollTop();
         var navbar = $(".tfc-navbar--detail");
         var navbarBorder = $(".tfc-navbar--detail .tfc-navbar-border");
+        var navbarBackground = $(".tfc-navbar--detail .tfc-navbar-background");
         var stationName = $(".tfc-h1--detail");
+        var filterButton = $(".tfc-filter-button");
         var stationdepartures = $(".tfc-station-departures-list");
         var minHeight = navbar.data("minHeight");
         var originalHeight = navbar.data("originalHeight");
-        var newHeight = originalHeight - scrollTop;
+        // var newHeight = originalHeight - scrollTop;
 
-        navbar.height(newHeight);
-
-        navbarBorder.css("opacity", function() {
-            return scrollTop / 100;
+        navbar.css("height", function() {
+            return originalHeight - scrollTop + 40;
         });
 
-        var s = Math.min(Math.max(1 - (scrollTop - 20)/200, 0.7), 1);
+        // navbarBorder.css("opacity", function() {
+        //     return scrollTop / 100;
+        // });
 
-        stationName.css("transform", "scale("+ s +")");
+        navbarBackground.css("opacity", function() {
+            return 1 - scrollTop / 100;
+        });
+
+        navbarBorder.css("transform", function() {
+            var y = Math.max($(this).data("originalOffsetY") - scrollTop, 0);
+            return "translateY("+ y +"px)"
+        });
+        
+        filterButton.css("transform", function() {
+            var y = Math.max($(this).data("originalOffsetY") - scrollTop, 0);
+            return "translateY("+ y +"px)"
+        });
+
+        stationName.css("transform", function() {
+            var s = Math.min(Math.max(1 - (scrollTop - 32)/200, 0.64), 1);
+            var y = Math.max($(this).data("originalOffsetY") - scrollTop, 0.5);
+            return "translateY("+ y +"px) scale("+ s +")";
+        });
+
+
         // stationdepartures.css("transform", "scale("+ s +")");
 
 
@@ -193,7 +287,7 @@ function init() {
     });
 
 
-    $(".tfc-scrollview").bind('touchend', function() {
+    $(".tfc-scrollview--enabled").bind('touchend', function() {
         if ($(this).hasClass("tfc-scrollview--detail")) {
             // Calculate the speed/velocity of the touchgesture
             // in px per millisecond
@@ -238,7 +332,7 @@ function init() {
         }
 
         // ScrollHack Stuff
-        $(".tfc-scrollview").css("transform", "translateY(0px)");
+        $(this).css("transform", "translateY(0px)");
         $(this).removeClass("tfc-scrollview--locked");
 
         if ($(this).data("moved") == false) {
@@ -270,6 +364,17 @@ function init() {
         $(".tfc-view--detail").addClass("tfc-view--transition");
         setTimeout(function() {
             $("body").addClass("tfc--viewstate-detail");
+
+            // Init Detail View
+            a = parseInt($(".tfc-h1--detail").css('transform').split(/[()]/)[1].split(',')[5],10);
+            $(".tfc-h1--detail").data("originalOffsetY", a);
+
+            b = parseInt($(".tfc-filter-button").css('transform').split(/[()]/)[1].split(',')[5],10);
+            $(".tfc-filter-button").data("originalOffsetY", b);
+
+            c = parseInt($(".tfc-navbar-border--detail").css('transform').split(/[()]/)[1].split(',')[5],10);
+            $(".tfc-navbar-border--detail").data("originalOffsetY", c);
+
         }, 50);
         setTimeout(function() {
             $(".tfc-view--home").removeClass("tfc-view--transition");

@@ -1,6 +1,65 @@
 @import 'partials/normalize';
 @import 'partials/variables';
 
+/*! system-font.css v1.1.0 | CC0-1.0 License | github.com/jonathantneal/system-font-face */
+
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+    font-family: system;
+    font-style: italic;
+    font-weight: 300;
+    src: local(".SFNSText-LightItalic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Ubuntu Light Italic"), local("Segoe UI Light Italic"), local("Roboto-LightItalic"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 400;
+    src: local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Ubuntu"), local("Segoe UI"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+    font-family: system;
+    font-style: italic;
+    font-weight: 400;
+    src: local(".SFNSText-Italic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Ubuntu Italic"), local("Segoe UI Italic"), local("Roboto-Italic"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 500;
+    src: local(".SFNSText-Medium"), local(".HelveticaNeueDeskInterface-MediumP4"), local(".LucidaGrandeUI"), local("Ubuntu Medium"), local("Segoe UI Semibold"), local("Roboto-Medium"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+    font-family: system;
+    font-style: italic;
+    font-weight: 500;
+    src: local(".SFNSText-MediumItalic"), local(".HelveticaNeueDeskInterface-MediumItalicP4"), local(".LucidaGrandeUI"), local("Ubuntu Medium Italic"), local("Segoe UI Semibold Italic"), local("Roboto-MediumItalic"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 700;
+    src: local(".SFNSText-Bold"), local(".HelveticaNeueDeskInterface-Bold"), local(".LucidaGrandeUI"), local("Ubuntu Bold"), local("Roboto-Bold"), local("DroidSans-Bold"), local("Segoe UI Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+    font-family: system;
+    font-style: italic;
+    font-weight: 700;
+    src: local(".SFNSText-BoldItalic"), local(".HelveticaNeueDeskInterface-BoldItalic"), local(".LucidaGrandeUI"), local("Ubuntu Bold Italic"), local("Roboto-BoldItalic"), local("DroidSans-Bold"), local("Segoe UI Bold Italic"), local("Tahoma Bold");
+}
+
+
 @font-face {
   font-family: 'trainicons';
   src:
@@ -18,11 +77,11 @@ html {
 }
 body {
     color: $black;
-    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-family: system, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     // font-size: 16px;
-    font: -apple-system-body;
+    // font: -apple-system-body;
     overflow: hidden;
     height: 100vh;
 }
@@ -33,13 +92,14 @@ body {
 // Typography
 .tfc-h1 {
     // font: -apple-system-headline;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
 }
 
 .tfc-h1--detail {
     transform-origin: left center;
-    font-size: 26px;
+    font-size: 25px;
+    transform: translateY(24px);
 }
 
 // Forms
@@ -139,6 +199,10 @@ body {
     }
 }
 
+.tfc-viewcontainer--detail,.tfc-viewcontainer--detail-edit {
+    padding-top: 40px;
+}
+
 .tfc-viewcontainer--with-navbar {
     // a padding-top is being added via JS here
     // it's the height of the navbar belonging
@@ -149,9 +213,11 @@ body {
     width: 100%;
     padding: 10px 0;
     box-sizing: border-box;
-    border-bottom: 1px solid $grey-20;
 }
 
+.tfc-view-section--border {
+    border-bottom: 1px solid $grey-20;
+}
 
 
 .tfc-scrollview--home {
@@ -169,6 +235,15 @@ body {
 
 .tfc-scrollview--detail {
     z-index: 1000;
+}
+
+.tfc-scrollview--detail-edit {
+    z-index: 1050;
+    opacity: 0;
+    display: none;
+    background: rgba(255,255,255,0.5);
+    will-change: opacity;
+    perspective: 0;
 }
 
 // Viewcontainer States
@@ -197,6 +272,11 @@ body {
     }
 }
 
+.tfc--finish-viewstate-search {
+    .tfc-scrollview--home {
+        display: none;
+    }
+}
 
 .tfc--prepare-viewstate-detail {
     .tfc-view--home {
@@ -215,6 +295,83 @@ body {
     }
     .tfc-view--detail {
         transform: translateY(0%);
+    }
+}
+
+.tfc--finish-viewstate-detail {
+    .tfc-view--home {
+        display: none;
+    }
+}
+
+
+
+.tfc--prepare-viewstate-detail-edit {
+    .tfc-scrollview--detail {
+        transition: 0.6s linear;
+        opacity: 0;
+    }
+    .tfc-scrollview--detail-edit {
+        display: block;
+        opacity: 1;
+    }
+    .tfc-list-item--detail-edit {
+        transition: 0.3s linear;
+        border-bottom-color: transparent;
+        transition-delay: 1.5s;
+    }
+    .tfc-filter-button {
+        transition: 0.4s linear;
+    }
+    .tfc-h1--detail {
+        transition: 0.4s linear;
+    }
+    .tfc-navbar-border--detail {
+        transition: 0.4s linear;
+    }
+    .tfc-navbar-background {
+        transition: 0.4s linear;
+    }
+}
+
+.tfc--viewstate-detail-edit {
+    .tfc-scrollview--detail {
+        transform-origin: center bottom;
+        // transform: scale(0.9) !important;
+        // filter: blur(30px);
+    }
+    .tfc-scrollview--detail-edit {
+        
+    }
+    .tfc-station-departures-list {
+        opacity: 0;
+    }
+    .tfc-departure-type--detail-edit {
+        transition: 0.6s cubic-bezier(0.28, 0.82, 0.41, 0.94);
+    }
+    .tfc-filter-button {
+        transform: translateY(0) !important;
+    }
+    .tfc-h1--detail {
+        transform: translateY(0.5px) scale(0.64) !important;
+    }
+    .tfc-navbar-border--detail {
+        transform: translateY(0) !important;
+    }
+    .tfc-navbar-background {
+        opacity: 0 !important;
+    }
+}
+
+.tfc--finish-viewstate-detail-edit {
+    .tfc-departure-type--detail-edit {
+        transition: 0.6s cubic-bezier(0.28, 0.82, 0.41, 0.94);
+    }
+    .tfc-scrollview--detail {
+        // display: none;
+    }
+    .tfc-list-item--detail-edit {
+        border-bottom-color: $grey-20;
     }
 }
 
@@ -242,23 +399,24 @@ body {
 
 .tfc-navbar-border {
     position: absolute;
-    display: none;
     width: 100%;
-    height: 5px;
-    bottom: -5px;
+    height: 1px;
+    bottom: -1px;
     left: 0;
     background-color: $grey-20-translucent;
-    transform: scaleY(0.1);
-    transform-origin: top;
     .tfc--backdropFilter & {
         -webkit-backdrop-filter: blur(6px);
         background-color: $grey-20-translucent;
     }
     .tfc--retina & {
-        height: 5px;
-        bottom: -5px;
+        height: 0.5px;
+        bottom: -0.5px;
 
     }
+}
+
+.tfc-navbar-border--detail {
+    transform: translateY(111px);
 }
 
 .tfc-navbar-background {
@@ -267,9 +425,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../assets/images/limmatplatz-map.png");
+    background: linear-gradient(rgba(255, 255, 255, 0.52), rgb(255, 255, 255)), url(../assets/images/limmatplatz-map.png);
     background-size: 100%;
-    background-position: 0% -59px;
+    background-position: top, 0% -59px;
 }
 
 .tfc-navbar--home {
@@ -282,8 +440,8 @@ body {
     display: flex;
     align-items: center;
     min-height: 50px;
-    max-height: 160px;
-    height: 160px;
+    max-height: 50px;
+    height: 50px;
     z-index: 900;
     position: relative;
 }
@@ -291,9 +449,6 @@ body {
 .tfc-navbar--fixed {
     position: fixed;
     z-index: 1100;
-    .tfc-navbar-border {
-        display: block;
-    }
     // box-shadow: 0 1px 0px $grey-20-translucent;
     // .tfc--retina & {
     //     box-shadow: 0 1px 0px $grey-20-translucent;
@@ -351,10 +506,12 @@ body {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-
+.tfc-filter-button {
+    transform: translateY(107px);
+}
 
 .tfc-navbar-detail-container {
-    padding: 0 10px;
+    width: 100%;
     position: relative;
     z-index: 10;
 }
@@ -435,6 +592,19 @@ body {
     font-size: 24px;
 }
 
+.tfc-departure-type--detail-edit {
+    font-size: 36px;
+    transform-origin: center;
+}
+
+.tfc-departure-type--detail-edit--original-pos {
+    transform: translate(0,0) scale(0.33333333) !important;
+}
+
+.tfc-departure-type--detail-edit--original-scale {
+    transform: translate(0,0) scale(1) !important;
+}
+
 .tfc-list-item--departure {
     font-size: 16px;
     padding: 16px 0 16px 0px;
@@ -443,6 +613,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    .tfc--retina & {
+        border-width: 0.5px;
+    }
+}
+
+.tfc-list-item--detail-edit {
+    font-size: 16px;
+    padding: 18px 0 18px 0;
+    margin-left: 10px;
+    border-bottom: 1px solid $grey-20;
+    display: flex;
+    align-items: center;
     .tfc--retina & {
         border-width: 0.5px;
     }
