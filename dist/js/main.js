@@ -1077,8 +1077,10 @@ function init() {
 
         setTimeout(function() {
             $(".tfc-departure-type--detail-edit").each(function(i) {
-                var d = 1 - (i * 0.07);
-                $(this).css("transition-delay", (d) + "s");
+                var delay = 1 - (i * 0.07);
+                var duration = (i * 0.1) + 0.5;
+                $(this).css("transition-delay", (delay) + "s");
+                $(this).css("transition-duration", (duration) + "s");
             });
             $(".tfc-departure-type--detail-edit").addClass("tfc-departure-type--detail-edit--original-pos");
             $("body").addClass("tfc--viewstate-detail-edit");
