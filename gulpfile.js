@@ -4,6 +4,7 @@ var gulp        = require('gulp');
 var util        = require('gulp-util');
 var sass        = require('gulp-sass') ;
 var notify      = require("gulp-notify") ;
+var server      = require("gulp-webserver") ;
 var uglify      = require('gulp-uglify');
 var minifycss   = require('gulp-clean-css');
 var minifhtml   = require('gulp-htmlmin');
@@ -24,6 +25,14 @@ function swallowError (error) {
   this.emit('end')
 }
 
+gulp.task('webserver', function() {
+  gulp.src('.')
+    .pipe(server({
+      port: 8001,
+      directoryListing: true,
+      open: true
+    }));
+});
 
 gulp.task('twig', function () {
     return gulp.src('src/templates/*.twig')
@@ -81,4 +90,4 @@ gulp.task('watch', function() {
 
 
 // Default Task
-gulp.task('default', ['sass', 'watch', 'js', 'assets']);
+gulp.task('default', ['sass', 'watch', 'js', 'assets', 'webserver']);

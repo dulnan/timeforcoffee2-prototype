@@ -7,6 +7,7 @@
     "gulp-htmlmin": "*",
     "gulp-notify": "*",
     "gulp-rename": "*",
+    "gulp-webserver": "*",
     "gulp-sass": "*",
     "gulp-data": "*",
     "gulp-size": "*",
