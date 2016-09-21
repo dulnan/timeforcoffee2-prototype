@@ -99,7 +99,7 @@ body {
 .tfc-h1--detail {
     transform-origin: left center;
     font-size: 25px;
-    transform: translateY(24px);
+    transform: translateY(50px);
 }
 
 // Forms
@@ -142,7 +142,18 @@ body {
     }
 }
 
+.tfc-radio-button {
+    width: 24px;
+    height: 24px;
+    border: 2px solid $grey-20;
+    border-radius: 100%;
+    box-sizing: border-box;
+    transition: 0.5s cubic-bezier(0.28, 0.82, 0.41, 0.94);
+}
 
+.tfc-radio-button--checked {
+    border-color: $grey-50;
+}
 
 
 // Viewcontainer
@@ -304,6 +315,9 @@ body {
     }
 }
 
+.tfc-list-item-directions--detail-edit {
+    transition: 0.5s cubic-bezier(0.28, 0.82, 0.41, 0.94);
+}
 
 
 .tfc--prepare-viewstate-detail-edit {
@@ -331,6 +345,13 @@ body {
     }
     .tfc-navbar-background {
         transition: 0.4s linear;
+    }
+    .tfc-list-item-directions--detail-edit {
+        transform: translateX(150%);
+        opacity: 0;
+    }
+    .tfc-radio-button {
+        opacity: 0;
     }
 }
 
@@ -371,6 +392,13 @@ body {
     }
     .tfc-list-item--detail-edit {
         border-bottom-color: $grey-20;
+    }
+    .tfc-list-item-directions--detail-edit {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    .tfc-radio-button {
+        opacity: 1;
     }
 }
 
@@ -415,7 +443,7 @@ body {
 }
 
 .tfc-navbar-border--detail {
-    transform: translateY(111px);
+    transform: translateY(128px);
 }
 
 .tfc-navbar-background {
@@ -440,7 +468,7 @@ body {
     align-items: center;
     min-height: 50px;
     max-height: 50px;
-    height: 50px;
+    height: 70px;
     z-index: 900;
     position: relative;
 }
@@ -506,7 +534,7 @@ body {
 }
 
 .tfc-filter-button {
-    transform: translateY(107px);
+    transform: translateY(129px);
 }
 
 .tfc-navbar-detail-container {
@@ -675,6 +703,11 @@ body {
     flex: 0 0 40px;
     font-size: 20px;
     text-align: right;
+    padding-right: 10px;
+}
+
+.tfc-list-item--radio-button-container {
+    flex: 0 0 24px;
     padding-right: 10px;
 }
 

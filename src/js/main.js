@@ -117,15 +117,17 @@ function init() {
             $(".tfc-departure-type--detail-edit").each(function(i) {
                 var delay = 1 - (i * 0.07);
                 var duration = (i * 0.1) + 0.5;
-                $(this).css("transition-delay", (delay) + "s");
-                $(this).css("transition-duration", (duration) + "s");
+                $(this).css("transition-delay", (0 + (i * 0.1)) + "s");
+                $(this).css("transition-duration", (0.6) + "s");
+                $('.tfc-list-item-directions--detail-edit:eq('+i+')').css("transition-delay", (1.3 + (i * 0.1)) + "s");
+                $('.tfc-radio-button--detail-edit:eq('+i+')').css("transition-delay", (1.3 + (i * 0.1)) + "s");
             });
             $(".tfc-departure-type--detail-edit").addClass("tfc-departure-type--detail-edit--original-pos");
             $("body").addClass("tfc--viewstate-detail-edit");
         }, 50);
 
         setTimeout(function() {
-            $(".tfc-departure-type--detail-edit").css("transition-delay", "");
+            // $(".tfc-departure-type--detail-edit").css("transition-delay", "");
             $("body").addClass("tfc--finish-viewstate-detail-edit");
             $("tfc-scrollview--detail-edit").addClass("tfc-scrollview--enabled");
         }, 150);
@@ -272,7 +274,7 @@ function init() {
         });
 
         stationName.css("transform", function() {
-            var s = Math.min(Math.max(1 - (scrollTop - 32)/200, 0.64), 1);
+            var s = Math.min(Math.max(1 - (scrollTop - 50)/200, 0.64), 1);
             var y = Math.max($(this).data("originalOffsetY") - scrollTop, 0.5);
             return "translateY("+ y +"px) scale("+ s +")";
         });
@@ -324,6 +326,8 @@ function init() {
                     $(".tfc-view--home").css("opacity", "");
                     $(".tfc-view--home").css("transform", "");
                     $("body").removeClass("tfc--viewstate-detail");
+                    var stateObj = { foo: "bar" };
+                    history.replaceState(stateObj, "Home", "?home");
                 }
 
                 setTimeout(function() {
@@ -361,6 +365,10 @@ function init() {
     // Transitioning to Detail View
     $(".tfc-list-item--classic").click(function(e) {
         e.stopPropagation();
+
+        var stateObj = { foo: "bar" };
+        history.pushState(stateObj, "Detail Page", "?detail");
+
         $("body").addClass("tfc--prepare-viewstate-detail");
         $(".tfc-view--home").addClass("tfc-view--transition");
         $(".tfc-view--detail").addClass("tfc-view--transition");
@@ -382,7 +390,13 @@ function init() {
             $(".tfc-view--home").removeClass("tfc-view--transition");
             $(".tfc-view--detail").removeClass("tfc-view--transition");
         }, 630);
-    })
+    });
+
+    $(window).bind("popstate", function() {
+        $(".tfc-view--detail").removeClass("tfc-view--transition");
+        $("body").removeClass("tfc--prepare-viewstate-detail");
+        $("body").removeClass("tfc--viewstate-detail");
+    });
 
     // $(".tfc-departing-now").bind('animationiteration', function() {
     //     if ($(this).html() == 0) {

@@ -9,6 +9,8 @@
             "bg": "#11296f",
             "fg": "#ffffff"
           },
+          "direction1": "Zürich, Bahnhof Tiefenbrunnen",
+          "direction2": "Zürich, Bahnhof Altstetten N",
           "name": "4",
           "type": "tram"
         },
@@ -17,6 +19,8 @@
             "bg": "#ca7d3c",
             "fg": "#ffffff"
           },
+          "direction1": "Zürich, Bahnhof Altstetten N",
+          "direction2": "Zürich, Zoo",
           "name": "6",
           "type": "tram"
         },
@@ -25,6 +29,8 @@
             "bg": "#ffc100",
             "fg": "#000000"
           },
+          "direction1": "Zürich, Albisgütli",
+          "direction2": "Zürich, Frankental",
           "name": "13",
           "type": "tram"
         },
@@ -33,6 +39,8 @@
             "bg": "#8e224d",
             "fg": "#ffffff"
           },
+          "direction1": "Zürich, Albisgütli",
+          "direction2": "Zürich, Werdhölzli",
           "name": "17",
           "type": "tram"
         },
@@ -41,6 +49,8 @@
             "bg": "#ccb2d1",
             "fg": "#000000"
           },
+          "direction1": "Zürich, Strassenverkehrsamt",
+          "direction2": "Zürich, Holzerhurd",
           "name": "32",
           "type": "bus"
         },
@@ -49,6 +59,8 @@
             "bg": "#000000",
             "fg": "#fff200"
           },
+          "direction1": "Zürich, Holzerhurd",
+          "direction2": "Zürich, Waidhof",
           "name": "N1",
           "type": "bus"
         },
@@ -57,6 +69,8 @@
             "bg": "#000000",
             "fg": "#fff200"
           },
+          "direction1": "Unterengstringen, Sennenbüel",
+          "direction2": "Zürich, Bellevue",
           "name": "N4",
           "type": "bus"
         },
@@ -65,6 +79,8 @@
             "bg": "#000000",
             "fg": "#fff200"
           },
+          "direction1": "Zürich, Bellevue",
+          "direction2": "Zürich, Schmiede Wiedikon",
           "name": "N5",
           "type": "bus"
         },
@@ -73,6 +89,7 @@
             "bg": "#000000",
             "fg": "#fff200"
           },
+          "direction1": "Opfikon, Schulstrasse",
           "name": "N7",
           "type": "bus"
         },
@@ -81,6 +98,8 @@
             "bg": "#000000",
             "fg": "#fff200"
           },
+          "direction1": "Zürich, Albisriederplatz",
+          "direction2": "Zürich, Bellevue",
           "name": "N8",
           "type": "bus"
         },
@@ -89,6 +108,8 @@
             "bg": "#000000",
             "fg": "#fff200"
           },
+          "direction1": "Zürich, Bellevue",
+          "direction2": "Zürich, Albisrieden",
           "name": "N13",
           "type": "bus"
         }

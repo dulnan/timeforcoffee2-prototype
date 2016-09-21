@@ -162,13 +162,21 @@
         <main class="tfc-viewcontainer tfc-viewcontainer--detail-edit">
             <section class="tfc-view-section">
                 <ul class="tfc-list tfc-list-classic">
-                        {% for departure in stationDepartures[0].departures %}
-                            <li class="tfc-list-item tfc-list-item--detail-edit" data-type="{{ departure.type }}">
-                                <div class="tfc-departure-type-wrapper">
-                                    {% include "partials/departure_type.twig" with {'departure': departure, 'style': 'detail-edit' } %}
+                    {% for departure in stationDepartures[0].departures %}
+                        <li class="tfc-list-item tfc-list-item--detail-edit" data-type="{{ departure.type }}">
+                            <div class="tfc-departure-type-wrapper">
+                                {% include "partials/departure_type.twig" with {'departure': departure, 'style': 'detail-edit' } %}
+                            </div>
+                            <div class="tfc-list-item--departure-middle tfc-list-item-directions--detail-edit">
+                                <div class="tfc-list-item--departure-to">
+                                    {{ departure.direction1 }}
                                 </div>
-                            </li>
-                        {% endfor %}
+                            </div>
+                            <div class="tfc-list-item--radio-button-container">
+                                <div class="tfc-radio-button tfc-radio-button--checked tfc-radio-button--detail-edit"></div>
+                            </div>
+                        </li>
+                    {% endfor %}
                 </ul>
             </section>
         </main>
